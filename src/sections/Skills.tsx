@@ -1,63 +1,55 @@
 import React from "react";
-import "../styles/Skills.css";
 
 const Skills: React.FC = () => {
   const skillCategories = [
     {
-      title: "Frontend",
+      title: "Languages",
+      skills: ["HTML5", "CSS3", "JavaScript", "TypeScript", "Python", "SQL"],
+    },
+    {
+      title: "Frameworks",
       skills: [
-        { name: "HTML5", level: 90 },
-        { name: "CSS3/SASS", level: 85 },
-        { name: "JavaScript", level: 85 },
-        { name: "TypeScript", level: 80 },
-        { name: "React", level: 85 },
+        "React",
+        "Node.js",
+        "Express",
+        "Next.js",
+        "Tailwind CSS",
+        "Bootstrap",
       ],
     },
     {
-      title: "Backend",
-      skills: [
-        { name: "Node.js", level: 75 },
-        { name: "Express", level: 70 },
-        { name: "MongoDB", level: 65 },
-        { name: "SQL", level: 60 },
-      ],
-    },
-    {
-      title: "Tools & Others",
-      skills: [
-        { name: "Git", level: 80 },
-        { name: "Webpack", level: 65 },
-        { name: "Responsive Design", level: 90 },
-        { name: "UI/UX Design", level: 70 },
-      ],
+      title: "Tools",
+      skills: ["Git", "GitHub", "VS Code", "Figma", "Webpack", "Docker"],
     },
   ];
 
   return (
-    <section id="skills" className="skills">
-      <div className="container">
+    <section
+      id="skills"
+      className="py-20 bg-white dark:bg-primary/95 transition-colors duration-300"
+    >
+      <div className="container mx-auto px-4">
         <h2 className="section-title">My Skills</h2>
         <p className="section-description">
           Here are some of the technologies and tools I've been working with:
         </p>
 
-        <div className="skills-container">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
           {skillCategories.map((category, index) => (
-            <div key={index} className="skill-category">
-              <h3 className="category-title">{category.title}</h3>
-              <div className="skills-list">
+            <div
+              key={index}
+              className="bg-gray-50 dark:bg-primary/50 rounded-lg p-6 shadow-md"
+            >
+              <h3 className="text-xl font-semibold text-accent mb-4">
+                {category.title}
+              </h3>
+              <div className="grid grid-cols-2 gap-2">
                 {category.skills.map((skill, skillIndex) => (
-                  <div key={skillIndex} className="skill-item">
-                    <div className="skill-info">
-                      <span className="skill-name">{skill.name}</span>
-                      <span className="skill-percentage">{skill.level}%</span>
-                    </div>
-                    <div className="skill-bar">
-                      <div
-                        className="skill-progress"
-                        style={{ width: `${skill.level}%` }}
-                      ></div>
-                    </div>
+                  <div key={skillIndex} className="flex items-center">
+                    <div className="w-2 h-2 bg-accent rounded-full mr-2"></div>
+                    <span className="text-gray-800 dark:text-gray-200">
+                      {skill}
+                    </span>
                   </div>
                 ))}
               </div>
