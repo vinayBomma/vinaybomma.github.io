@@ -4,7 +4,6 @@ const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    subject: "",
     message: "",
   });
 
@@ -27,132 +26,84 @@ const Contact: React.FC = () => {
     setFormData({
       name: "",
       email: "",
-      subject: "",
       message: "",
     });
   };
 
   return (
-    <section id="contact" className="contact">
-      <div className="container">
+    <section
+      id="contact"
+      className="py-20 bg-white dark:bg-primary/95 transition-colors duration-300"
+    >
+      <div className="container mx-auto px-4">
         <h2 className="section-title">Get In Touch</h2>
         <p className="section-description">
           Feel free to contact me for any work or suggestions
         </p>
 
-        <div className="contact-container">
-          <div className="contact-info">
-            <div className="contact-item">
-              <div className="icon">
-                <i className="fas fa-map-marker-alt"></i>
-              </div>
-              <div className="text">
-                <h3>Location</h3>
-                <p>Your City, Country</p>
-              </div>
-            </div>
-            <div className="contact-item">
-              <div className="icon">
-                <i className="fas fa-envelope"></i>
-              </div>
-              <div className="text">
-                <h3>Email</h3>
-                <p>your.email@example.com</p>
-              </div>
-            </div>
-            <div className="contact-item">
-              <div className="icon">
-                <i className="fas fa-phone"></i>
-              </div>
-              <div className="text">
-                <h3>Phone</h3>
-                <p>+1 234 567 8900</p>
-              </div>
+        <div className="max-w-lg mx-auto mt-12">
+          <form onSubmit={handleSubmit} className="space-y-6">
+            <div>
+              <label
+                htmlFor="name"
+                className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+              >
+                Name
+              </label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
+                required
+                className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-accent focus:border-accent"
+              />
             </div>
 
-            <div className="social-links">
-              <a
-                href="https://linkedin.com"
-                className="social-icon"
-                target="_blank"
-                rel="noopener noreferrer"
+            <div>
+              <label
+                htmlFor="email"
+                className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
               >
-                <i className="fab fa-linkedin"></i>
-              </a>
-              <a
-                href="https://github.com"
-                className="social-icon"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i className="fab fa-github"></i>
-              </a>
-              <a
-                href="https://twitter.com"
-                className="social-icon"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i className="fab fa-twitter"></i>
-              </a>
-              <a
-                href="https://instagram.com"
-                className="social-icon"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i className="fab fa-instagram"></i>
-              </a>
+                Email
+              </label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                required
+                className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-accent focus:border-accent"
+              />
             </div>
-          </div>
 
-          <div className="contact-form">
-            <form onSubmit={handleSubmit}>
-              <div className="form-group">
-                <input
-                  type="text"
-                  name="name"
-                  placeholder="Your Name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  required
-                />
-              </div>
-              <div className="form-group">
-                <input
-                  type="email"
-                  name="email"
-                  placeholder="Your Email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  required
-                />
-              </div>
-              <div className="form-group">
-                <input
-                  type="text"
-                  name="subject"
-                  placeholder="Subject"
-                  value={formData.subject}
-                  onChange={handleChange}
-                  required
-                />
-              </div>
-              <div className="form-group">
-                <textarea
-                  name="message"
-                  rows={5}
-                  placeholder="Your Message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  required
-                ></textarea>
-              </div>
-              <button type="submit" className="btn primary-btn">
-                Send Message
-              </button>
-            </form>
-          </div>
+            <div>
+              <label
+                htmlFor="message"
+                className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+              >
+                Message
+              </label>
+              <textarea
+                id="message"
+                name="message"
+                rows={5}
+                value={formData.message}
+                onChange={handleChange}
+                required
+                className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-accent focus:border-accent"
+              ></textarea>
+            </div>
+
+            <button
+              type="submit"
+              className="w-full bg-accent hover:bg-accent/80 text-white font-medium py-2 px-4 rounded-md transition-colors duration-300"
+            >
+              Send Message
+            </button>
+          </form>
         </div>
       </div>
     </section>
