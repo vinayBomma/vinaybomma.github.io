@@ -1,13 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import { useTheme } from "../context/ThemeContext";
 
 const Header: React.FC = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { darkMode, toggleDarkMode } = useTheme();
-
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
 
   return (
     <header className="fixed top-0 left-0 w-full bg-white dark:bg-primary shadow-md z-50 py-4 transition-colors duration-300">
@@ -15,12 +10,12 @@ const Header: React.FC = () => {
         <div className="flex items-center">
           <button
             onClick={toggleDarkMode}
-            className="p-2 rounded-full transition-colors duration-300 bg-gray-200 dark:bg-gray-700 flex items-center justify-center"
+            className="p-1.5 transition-colors duration-300 flex items-center justify-center"
             aria-label="Toggle Dark Mode"
           >
             {darkMode ? (
               <svg
-                className="w-5 h-5 text-yellow-500"
+                className="w-8 h-8 text-green-700"
                 fill="currentColor"
                 viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg"
@@ -33,7 +28,7 @@ const Header: React.FC = () => {
               </svg>
             ) : (
               <svg
-                className="w-5 h-5 text-gray-900"
+                className="w-8 h-8 text-gray-900"
                 fill="currentColor"
                 viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg"
@@ -44,80 +39,14 @@ const Header: React.FC = () => {
           </button>
         </div>
 
-        <div
-          className="lg:hidden flex flex-col justify-between w-6 h-5 cursor-pointer"
-          onClick={toggleMenu}
+        <a
+          href="https://vinaybomma.hashnode.dev"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-gray-800 dark:text-white hover:text-accent dark:hover:text-accent transition-colors duration-300 uppercase tracking-wider font-semibold text-base px-3 py-1.5 border-b-2 border-accent"
         >
-          <span
-            className={`h-0.5 bg-gray-800 dark:bg-white transition-all duration-300 ${
-              isMenuOpen ? "transform rotate-45 translate-y-2" : ""
-            }`}
-          ></span>
-          <span
-            className={`h-0.5 bg-gray-800 dark:bg-white transition-all duration-300 ${
-              isMenuOpen ? "opacity-0" : "opacity-100"
-            }`}
-          ></span>
-          <span
-            className={`h-0.5 bg-gray-800 dark:bg-white transition-all duration-300 ${
-              isMenuOpen ? "transform -rotate-45 -translate-y-2" : ""
-            }`}
-          ></span>
-        </div>
-
-        <nav
-          className={`fixed lg:static top-16 left-0 w-full lg:w-auto bg-white dark:bg-primary shadow-lg lg:shadow-none transform ${
-            isMenuOpen ? "translate-y-0" : "-translate-y-full lg:translate-y-0"
-          } transition-transform duration-300 lg:transition-none`}
-        >
-          <ul className="flex flex-col lg:flex-row py-4 lg:py-0 items-center">
-            <li className="mb-4 lg:mb-0 lg:mr-6">
-              <a
-                href="#home"
-                onClick={() => setIsMenuOpen(false)}
-                className="text-gray-800 dark:text-white hover:text-accent dark:hover:text-accent transition-colors duration-300"
-              >
-                Home
-              </a>
-            </li>
-            <li className="mb-4 lg:mb-0 lg:mr-6">
-              <a
-                href="#about"
-                onClick={() => setIsMenuOpen(false)}
-                className="text-gray-800 dark:text-white hover:text-accent dark:hover:text-accent transition-colors duration-300"
-              >
-                About
-              </a>
-            </li>
-            <li className="mb-4 lg:mb-0 lg:mr-6">
-              <a
-                href="#skills"
-                onClick={() => setIsMenuOpen(false)}
-                className="text-gray-800 dark:text-white hover:text-accent dark:hover:text-accent transition-colors duration-300"
-              >
-                Skills
-              </a>
-            </li>
-            <li className="mb-4 lg:mb-0 lg:mr-6">
-              <a
-                href="#projects"
-                onClick={() => setIsMenuOpen(false)}
-                className="text-gray-800 dark:text-white hover:text-accent dark:hover:text-accent transition-colors duration-300"
-              >
-                Projects
-              </a>
-            </li>
-            <li className="mb-4 lg:mb-0">
-              <a
-                href="#contact"
-                onClick={() => setIsMenuOpen(false)}
-                className="text-gray-800 dark:text-white hover:text-accent dark:hover:text-accent transition-colors duration-300"
-              >
-                Contact
-              </a>
-            </li>
-          </ul>
-        </nav>
+          Blog
+        </a>
       </div>
     </header>
   );
