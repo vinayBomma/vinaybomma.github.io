@@ -1,7 +1,0 @@
-/* Any remaining global styles not handled by Tailwind */
-/* You can add any custom styles that can't be easily handled by Tailwind here */
-
-/* Ensure smooth transitions when toggling dark mode */
-.App {
-  transition: background-color 0.3s, color 0.3s;
-}
