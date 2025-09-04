@@ -1,91 +1,61 @@
-# Personal Portfolio Website
+# Portfolio Website
 
-A responsive portfolio website built with React and TypeScript. This project showcases skills, projects, and contact information in a modern, user-friendly interface.
+Professional portfolio website built with React and TypeScript. Showcases skills, projects, and contact information.
 
-## Features
+## Tech Stack
 
-- Responsive design that works on all device sizes
-- Interactive navigation with smooth scrolling
-- Skills section with progress bars
-- Projects showcase with interactive cards
-- Contact form for easy communication
-- Modern and clean UI
+- React.js + TypeScript
+- CSS3 + Tailwind CSS
+- Responsive design principles
+- Form handling via Formspree
 
-## Sections
-
-- Header with navigation
-- Hero section with introduction
-- About section with personal information
-- Skills section showcasing technical abilities
-- Projects section displaying past work
-- Contact section with form and social links
-- Footer
-
-## Technologies Used
-
-- React.js
-- TypeScript
-- CSS3 (with custom responsive design)
-- Font Awesome icons
-
-## Getting Started
-
-### Prerequisites
-
-- Node.js (v14 or later)
-- npm or yarn
-
-### Installation
-
-1. Clone the repository
-   ```bash
-   git clone <repository-url>
-   ```
-
-2. Navigate to the project directory
-   ```bash
-   cd portfolio
-   ```
-
-3. Install dependencies
-   ```bash
-   npm install
-   # or
-   yarn install
-   ```
-
-4. Start the development server
-   ```bash
-   npm start
-   # or
-   yarn start
-   ```
-
-5. Open your browser and visit `http://localhost:3000`
-
-## Customization
-
-- Replace placeholder content in component files with your personal information
-- Update the skills in `Skills.tsx` with your own skills and proficiency levels
-- Add your own projects in `Projects.tsx`
-- Update contact information in `Contact.tsx`
-- Replace "Your Name" with your actual name throughout the project
-
-## Building for Production
+## Development
 
 ```bash
+# Install dependencies
+npm install
+
+# Start development server
+npm start
+
+# Build for production
 npm run build
-# or
-yarn build
 ```
 
-This will create an optimized build in the `build` folder.
+## Deployment Notes
 
-## License
+1. Package setup:
 
-This project is open source and available under the MIT License.
+   ```
+   "homepage": "https://vinaybomma.github.io"
+   "scripts": {
+     "predeploy": "npm run build",
+     "deploy": "gh-pages -d build"
+   }
+   ```
 
-## Acknowledgements
+2. Deploy command:
 
-- [Font Awesome](https://fontawesome.com/) for icons
-- [Google Fonts](https://fonts.google.com/) for the Poppins font family
+   ```bash
+   npm run deploy
+   ```
+
+3. Structure:
+   - `main` branch: Source code
+   - `gh-pages` branch: Built files for deployment
+
+## Project Structure
+
+- `src/sections/` - Main page sections
+- `src/styles/` - CSS styling
+- `src/assets/` - Static resources
+- `src/context/` - Context providers
+
+## Key Components
+
+- `Header.tsx` - Navigation and theme toggle
+- `Hero.tsx` - Main banner with introduction
+- `Skills.tsx` - Technical skills with proficiency indicators
+- `Projects.tsx` - Portfolio projects with details
+- `Contact.tsx` - Contact form and social links
+- `Footer.tsx` - Copyright and additional links
