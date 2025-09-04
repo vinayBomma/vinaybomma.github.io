@@ -4,22 +4,23 @@ const Skills: React.FC = () => {
   const skillCategories = [
     {
       title: "Languages",
-      skills: ["HTML5", "CSS3", "JavaScript", "TypeScript", "Python", "SQL"],
+      skills: ["JavaScript", "TypeScript", "SQL", "Python"],
     },
     {
       title: "Frameworks",
       skills: [
         "React",
+        "React Native",
         "Node.js",
-        "Express",
+        "Vue.js",
         "Next.js",
-        "Tailwind CSS",
-        "Bootstrap",
+        "Tailwind",
+        "GraphQL",
+        "MongoDB",
+        "AWS",
+        "Expo",
+        "PWA",
       ],
-    },
-    {
-      title: "Tools",
-      skills: ["Git", "GitHub", "VS Code", "Figma", "Webpack", "Docker"],
     },
   ];
 
@@ -29,29 +30,31 @@ const Skills: React.FC = () => {
       className="py-20 bg-white dark:bg-primary/95 transition-colors duration-300"
     >
       <div className="container mx-auto px-4">
-        <h2 className="section-title">My Skills</h2>
-        <p className="section-description">
-          Here are some of the technologies and tools I've been working with:
-        </p>
+        <h2 className="section-title">Skills</h2>
+        <p className="section-description">Technologies I work with</p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
           {skillCategories.map((category, index) => (
             <div
               key={index}
-              className="bg-gray-50 dark:bg-primary/50 rounded-lg p-6 shadow-md"
+              className="bg-white dark:bg-primary/50 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-100 dark:border-gray-700"
             >
-              <h3 className="text-xl font-semibold text-accent mb-4">
-                {category.title}
-              </h3>
-              <div className="grid grid-cols-2 gap-2">
-                {category.skills.map((skill, skillIndex) => (
-                  <div key={skillIndex} className="flex items-center">
-                    <div className="w-2 h-2 bg-accent rounded-full mr-2"></div>
-                    <span className="text-gray-800 dark:text-gray-200">
+              <div className="bg-accent/10 dark:bg-accent/20 p-3 flex items-center border-b border-gray-100 dark:border-gray-700">
+                <h3 className="text-xl font-bold text-accent dark:text-accent">
+                  {category.title}
+                </h3>
+              </div>
+              <div className="p-6">
+                <div className="flex flex-wrap gap-3">
+                  {category.skills.map((skill, skillIndex) => (
+                    <div
+                      key={skillIndex}
+                      className="px-3 py-2 bg-gray-50 dark:bg-gray-800 rounded-full text-lightText dark:text-darkText text-sm font-medium shadow-sm hover:shadow-md transition-shadow duration-300 border border-gray-100 dark:border-gray-700"
+                    >
                       {skill}
-                    </span>
-                  </div>
-                ))}
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           ))}
