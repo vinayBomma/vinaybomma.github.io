@@ -3,14 +3,19 @@ import { useTheme } from "../context/ThemeContext";
 
 const Header: React.FC = () => {
   const { darkMode, toggleDarkMode } = useTheme();
+  const navLinks = [
+    { label: "Apps", href: "#apps" },
+    { label: "Skills", href: "#skills" },
+    { label: "Contact", href: "#contact" },
+  ];
 
   return (
-    <header className="fixed top-0 left-0 w-full bg-white dark:bg-primary shadow-md z-50 py-4 transition-colors duration-300">
-      <div className="container mx-auto px-4 flex items-center justify-between">
-        <div className="flex items-center">
+    <header className="fixed top-0 left-0 z-50 w-full border-b border-gray-200/70 bg-white/85 py-3 shadow-sm backdrop-blur-xl transition-colors duration-300 dark:border-white/10 dark:bg-primary/85">
+      <div className="container mx-auto flex items-center justify-between gap-4 px-4">
+        <div className="flex items-center gap-3">
           <button
             onClick={toggleDarkMode}
-            className="p-1.5 transition-colors duration-300 flex items-center justify-center"
+            className="flex items-center justify-center rounded-full border border-gray-200 bg-gray-50 p-2 transition-colors duration-300 hover:border-accent dark:border-white/10 dark:bg-white/5"
             aria-label="Toggle Dark Mode"
           >
             {darkMode ? (
@@ -37,16 +42,36 @@ const Header: React.FC = () => {
               </svg>
             )}
           </button>
+          <a
+            href="#home"
+            className="hidden text-sm font-bold uppercase tracking-[0.22em] text-gray-800 transition-colors hover:text-accent dark:text-white md:inline-flex"
+          >
+            Vinay Bomma
+          </a>
         </div>
 
-        <a
-          href="https://vinaybomma.hashnode.dev"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-gray-800 dark:text-white hover:text-accent dark:hover:text-accent transition-colors duration-300 uppercase tracking-wider font-semibold text-base px-3 py-1.5 border-b-2 border-accent"
+        <nav
+          className="flex min-w-0 items-center justify-end gap-1 overflow-x-auto text-sm font-semibold"
+          aria-label="Primary navigation"
         >
-          Blog
-        </a>
+          {navLinks.map((link) => (
+            <a
+              key={link.href}
+              href={link.href}
+              className="whitespace-nowrap rounded-full px-3 py-2 text-gray-700 transition-colors hover:bg-accent/10 hover:text-accent dark:text-gray-200 dark:hover:bg-white/10 dark:hover:text-white"
+            >
+              {link.label}
+            </a>
+          ))}
+          <a
+            href="https://vinaybomma.hashnode.dev"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="whitespace-nowrap rounded-full border border-accent px-3 py-2 text-accent transition-colors hover:bg-accent hover:text-white"
+          >
+            Blog
+          </a>
+        </nav>
       </div>
     </header>
   );

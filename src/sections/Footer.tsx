@@ -17,7 +17,17 @@ const Footer: React.FC = () => {
     {
       name: "Blog",
       url: "https://vinaybomma.hashnode.dev",
-      icon: "fas fa-rss",
+      icon: "fas fa-blog",
+    },
+    {
+      name: "Google Play",
+      url: "https://play.google.com/store/apps/dev?id=8011732838508720275",
+      icon: "fab fa-google-play",
+    },
+    {
+      name: "App Store",
+      url: "https://apps.apple.com/in/developer/vinay-bomma/id1895131000",
+      icon: "fab fa-app-store-ios",
     },
     {
       name: "Email",

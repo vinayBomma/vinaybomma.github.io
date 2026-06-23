@@ -7,12 +7,13 @@ const Contact: React.FC = () => {
   return (
     <section
       id="contact"
-      className="py-20 bg-white dark:bg-primary/95 transition-colors duration-300"
+      className="bg-white py-20 transition-colors duration-300 dark:bg-primary/95"
     >
       <div className="container mx-auto px-4">
-        <h2 className="section-title">Get In Touch</h2>
+        <h2 className="section-title">Say hello</h2>
         <p className="section-description">
-          Feel free to contact me for any work or suggestions
+          Have feedback, a collaboration idea, or a product question? Send a
+          note and I will get back to you.
         </p>
 
         <div className="max-w-lg mx-auto mt-12">
@@ -27,11 +28,14 @@ const Contact: React.FC = () => {
               </p>
             </div>
           ) : (
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form
+              onSubmit={handleSubmit}
+              className="space-y-7 rounded-3xl border border-gray-100 bg-white p-6 shadow-xl dark:border-white/10 dark:bg-white/5 sm:p-8"
+            >
               <div>
                 <label
                   htmlFor="name"
-                  className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+                  className="mb-2 block text-sm font-semibold text-gray-700 dark:text-gray-300"
                 >
                   Name
                 </label>
@@ -40,7 +44,7 @@ const Contact: React.FC = () => {
                   id="name"
                   name="name"
                   required
-                  className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-accent focus:border-accent"
+                  className="w-full rounded-2xl border border-gray-300 bg-white px-4 py-3 text-gray-900 focus:border-accent focus:ring-accent dark:border-white/10 dark:bg-gray-800 dark:text-white"
                 />
                 <ValidationError
                   prefix="Name"
@@ -53,7 +57,7 @@ const Contact: React.FC = () => {
               <div>
                 <label
                   htmlFor="email"
-                  className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+                  className="mb-2 block text-sm font-semibold text-gray-700 dark:text-gray-300"
                 >
                   Email
                 </label>
@@ -62,7 +66,7 @@ const Contact: React.FC = () => {
                   id="email"
                   name="email"
                   required
-                  className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-accent focus:border-accent"
+                  className="w-full rounded-2xl border border-gray-300 bg-white px-4 py-3 text-gray-900 focus:border-accent focus:ring-accent dark:border-white/10 dark:bg-gray-800 dark:text-white"
                 />
                 <ValidationError
                   prefix="Email"
@@ -75,7 +79,7 @@ const Contact: React.FC = () => {
               <div>
                 <label
                   htmlFor="message"
-                  className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+                  className="mb-2 block text-sm font-semibold text-gray-700 dark:text-gray-300"
                 >
                   Message
                 </label>
@@ -84,7 +88,7 @@ const Contact: React.FC = () => {
                   name="message"
                   rows={5}
                   required
-                  className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-accent focus:border-accent"
+                  className="w-full rounded-2xl border border-gray-300 bg-white px-4 py-3 text-gray-900 focus:border-accent focus:ring-accent dark:border-white/10 dark:bg-gray-800 dark:text-white"
                 ></textarea>
                 <ValidationError
                   prefix="Message"
@@ -97,7 +101,7 @@ const Contact: React.FC = () => {
               <button
                 type="submit"
                 disabled={state.submitting}
-                className="w-full bg-accent hover:bg-accent/80 text-white font-medium py-2 px-4 rounded-md transition-colors duration-300 disabled:opacity-70 disabled:cursor-not-allowed"
+                className="w-full rounded-full bg-accent px-4 py-3 font-medium text-white transition-colors duration-300 hover:bg-accent/80 disabled:cursor-not-allowed disabled:opacity-70"
               >
                 {state.submitting ? "Sending..." : "Send Message"}
               </button>

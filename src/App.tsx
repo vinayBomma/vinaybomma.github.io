@@ -2,8 +2,8 @@ import React from "react";
 import "./App.css";
 import Header from "./sections/Header";
 import Hero from "./sections/Hero";
+import Apps from "./sections/Apps";
 import Skills from "./sections/Skills";
-import Projects from "./sections/Projects";
 import Contact from "./sections/Contact";
 import Footer from "./sections/Footer";
 import { ThemeProvider } from "./context/ThemeContext";
@@ -15,8 +15,8 @@ function App() {
         <Header />
         <main>
           <Hero />
+          <Apps />
           <Skills />
-          <Projects />
           <Contact />
         </main>
         <Footer />
