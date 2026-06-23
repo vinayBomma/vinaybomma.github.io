@@ -102,11 +102,8 @@ const Apps: React.FC = () => {
 
       <div className="container relative z-10 mx-auto px-4">
         <div className="mx-auto max-w-4xl text-center">
-          <p className="mb-4 text-sm font-bold uppercase tracking-[0.28em] text-emerald-200">
+          <h2 className="text-sm font-bold uppercase tracking-[0.28em] text-emerald-200">
             Apps I have built
-          </p>
-          <h2 className="text-4xl font-bold tracking-tight text-white md:text-6xl">
-            Small apps for food, focus, journaling, and pronunciation.
           </h2>
         </div>
 
@@ -114,14 +111,14 @@ const Apps: React.FC = () => {
           {apps.map((app) => (
             <article
               key={app.slug}
-              className={`group relative overflow-hidden rounded-[2rem] border border-white/10 bg-gradient-to-br ${app.gradient} p-5 shadow-2xl ring-1 ${app.ring} transition duration-300 hover:-translate-y-1 hover:border-white/25 sm:p-7`}
+              className={`group relative h-full overflow-hidden rounded-[2rem] border border-white/10 bg-gradient-to-br ${app.gradient} p-5 shadow-2xl ring-1 ${app.ring} transition duration-300 hover:-translate-y-1 hover:border-white/25 sm:p-7`}
             >
               <div
                 className={`absolute right-8 top-10 h-44 w-44 rounded-full ${app.glow} blur-3xl transition duration-300 group-hover:scale-125`}
               />
-              <div className="relative z-10 grid min-h-[480px] gap-8 md:grid-cols-[minmax(0,1fr)_190px] md:items-end">
-                <div className="flex min-w-0 flex-col">
-                  <div className="flex items-start gap-4">
+              <div className="relative z-10 grid min-h-[520px] gap-8 md:grid-cols-[minmax(0,1fr)_190px] md:items-end">
+                <div className="flex h-full min-w-0 flex-col">
+                  <div className="flex min-h-[84px] items-start gap-4">
                     <img
                       src={app.icon}
                       alt={`${app.name} app icon`}
@@ -138,11 +135,11 @@ const Apps: React.FC = () => {
                     </div>
                   </div>
 
-                  <p className="mt-8 text-base leading-8 text-slate-200">
+                  <p className="mt-8 min-h-[128px] text-base leading-8 text-slate-200">
                     {app.summary}
                   </p>
 
-                  <div className="mt-6 flex flex-wrap gap-2">
+                  <div className="mt-6 flex min-h-[84px] flex-wrap content-start gap-2">
                     {app.details.map((detail) => (
                       <span
                         key={detail}
@@ -153,7 +150,7 @@ const Apps: React.FC = () => {
                     ))}
                   </div>
 
-                  <div className="mt-8 grid gap-3 sm:grid-cols-2">
+                  <div className="mt-auto grid gap-3 pt-8 sm:grid-cols-2">
                     <a
                       href={app.landingUrl}
                       className="rounded-full bg-white px-5 py-3 text-center text-sm font-bold text-slate-950 transition hover:-translate-y-0.5 hover:bg-emerald-50 sm:col-span-2"
@@ -170,9 +167,7 @@ const Apps: React.FC = () => {
                         className="fab fa-google-play shrink-0"
                         aria-hidden="true"
                       ></i>
-                      <span className="truncate whitespace-nowrap">
-                        Google Play
-                      </span>
+                      <span className="whitespace-nowrap">Play Store</span>
                     </a>
                     <a
                       href={app.appStoreUrl}
