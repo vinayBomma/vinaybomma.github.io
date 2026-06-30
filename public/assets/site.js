@@ -3,6 +3,7 @@ const apps = [
   { name: "Coulda", slug: "coulda", summary: "A procrastination-busting task app with roasts, streaks, reports, and modes.", badge: "Procrastination Coach", theme: "ember", category: "Productivity" },
   { name: "Toki", slug: "toki", summary: "A private offline journal with prompts, moods, lock, exports, and optional AI reflection.", badge: "Private Journal", theme: "paper", category: "Lifestyle" },
   { name: "Twister", slug: "twister", summary: "A tongue-twister challenge app with 100+ languages, recordings, streaks, and badges.", badge: "Tongue Twister Challenge", theme: "violet", category: "Education & Games" },
+  { name: "Unbeaten XI", slug: "unbeaten", summary: "A focused sports companion for building your best XI and revisiting match-day plans.", badge: "Team Planner", theme: "gold", category: "Sports" },
 ];
 
 const appGrid = document.querySelector("#app-grid");

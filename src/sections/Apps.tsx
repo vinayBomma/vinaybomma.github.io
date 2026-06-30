@@ -8,8 +8,8 @@ interface AppShowcaseItem {
   icon: string;
   screenshot: string;
   landingUrl: string;
-  googlePlayUrl: string;
-  appStoreUrl: string;
+  googlePlayUrl?: string;
+  appStoreUrl?: string;
   gradient: string;
   glow: string;
   ring: string;
@@ -89,6 +89,20 @@ const apps: AppShowcaseItem[] = [
     ring: "ring-violet-300/30",
     details: ["100+ languages", "Recordings", "Badges"],
   },
+  {
+    name: "Unbeaten XI",
+    slug: "unbeaten",
+    category: "Sports",
+    summary:
+      "Build your dream cricket XI from real IPL and World Cup squads. Chase 14-0.",
+    icon: "/assets/icons/unbeaten.png",
+    screenshot: "/assets/screenshots/unbeaten/1.png",
+    landingUrl: "/unbeaten/",
+    gradient: "from-yellow-300/35 via-lime-400/10 to-slate-950",
+    glow: "bg-yellow-300/30",
+    ring: "ring-yellow-200/30",
+    details: ["Team planning", "Custom Rules", "Latest Squads"],
+  },
 ];
 
 const Apps: React.FC = () => {
@@ -157,32 +171,36 @@ const Apps: React.FC = () => {
                     >
                       View app
                     </a>
-                    <a
-                      href={app.googlePlayUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex min-w-0 items-center justify-center gap-2 rounded-full border border-white/15 bg-white/10 px-4 py-3 text-sm font-bold text-white transition hover:-translate-y-0.5 hover:bg-white/15"
-                    >
-                      <i
-                        className="fab fa-google-play shrink-0"
-                        aria-hidden="true"
-                      ></i>
-                      <span className="whitespace-nowrap">Play Store</span>
-                    </a>
-                    <a
-                      href={app.appStoreUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex min-w-0 items-center justify-center gap-2 rounded-full border border-white/15 bg-white/10 px-4 py-3 text-sm font-bold text-white transition hover:-translate-y-0.5 hover:bg-white/15"
-                    >
-                      <i
-                        className="fab fa-apple shrink-0"
-                        aria-hidden="true"
-                      ></i>
-                      <span className="truncate whitespace-nowrap">
-                        App Store
-                      </span>
-                    </a>
+                    {app.googlePlayUrl && (
+                      <a
+                        href={app.googlePlayUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex min-w-0 items-center justify-center gap-2 rounded-full border border-white/15 bg-white/10 px-4 py-3 text-sm font-bold text-white transition hover:-translate-y-0.5 hover:bg-white/15"
+                      >
+                        <i
+                          className="fab fa-google-play shrink-0"
+                          aria-hidden="true"
+                        ></i>
+                        <span className="whitespace-nowrap">Play Store</span>
+                      </a>
+                    )}
+                    {app.appStoreUrl && (
+                      <a
+                        href={app.appStoreUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex min-w-0 items-center justify-center gap-2 rounded-full border border-white/15 bg-white/10 px-4 py-3 text-sm font-bold text-white transition hover:-translate-y-0.5 hover:bg-white/15"
+                      >
+                        <i
+                          className="fab fa-apple shrink-0"
+                          aria-hidden="true"
+                        ></i>
+                        <span className="truncate whitespace-nowrap">
+                          App Store
+                        </span>
+                      </a>
+                    )}
                   </div>
                 </div>
 
