@@ -103,6 +103,38 @@ const apps: AppShowcaseItem[] = [
     ring: "ring-yellow-200/30",
     details: ["Team planning", "Custom Rules", "Latest Squads"],
   },
+  {
+    name: "Ace",
+    slug: "ace",
+    category: "Sports",
+    summary:
+      "Build your dream tennis lineup, set custom rules, and chase an unbeaten run across the court.",
+    icon: "/assets/icons/ace.png",
+    screenshot: "/assets/screenshots/ace/1.png",
+    landingUrl: "/ace/",
+    googlePlayUrl:
+      "https://play.google.com/store/apps/details?id=com.vinaybomma.ace",
+    gradient: "from-green-300/35 via-emerald-400/10 to-slate-950",
+    glow: "bg-green-300/30",
+    ring: "ring-green-200/30",
+    details: ["Tennis lineups", "Custom Rules", "Unbeaten runs"],
+  },
+  {
+    name: "Greenlit",
+    slug: "greenlit",
+    category: "Games",
+    summary:
+      "Produce a movie, hire the cast, survive studio chaos, and chase a billion dollar box office run.",
+    icon: "/assets/icons/greenlit.png",
+    screenshot: "/assets/screenshots/greenlit/1.png",
+    landingUrl: "/greenlit/",
+    googlePlayUrl:
+      "https://play.google.com/store/apps/details?id=com.vinaybomma.greenlit",
+    gradient: "from-yellow-500/35 via-stone-500/10 to-slate-950",
+    glow: "bg-yellow-400/30",
+    ring: "ring-yellow-300/30",
+    details: ["Movie simulation", "Casting chaos", "Box office runs"],
+  },
 ];
 
 const Apps: React.FC = () => {
