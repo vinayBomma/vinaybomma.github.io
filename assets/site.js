@@ -4,6 +4,8 @@ const apps = [
   { name: "Toki", slug: "toki", summary: "A private offline journal with prompts, moods, lock, exports, and optional AI reflection.", badge: "Private Journal", theme: "paper", category: "Lifestyle" },
   { name: "Twister", slug: "twister", summary: "A tongue-twister challenge app with 100+ languages, recordings, streaks, and badges.", badge: "Tongue Twister Challenge", theme: "violet", category: "Education & Games" },
   { name: "Unbeaten XI", slug: "unbeaten", summary: "A focused sports companion for building your best XI and revisiting match-day plans.", badge: "Team Planner", theme: "gold", category: "Sports" },
+  { name: "Ace", slug: "ace", summary: "A tennis companion for building lineups, setting custom rules, and chasing unbeaten runs.", badge: "Tennis Game", theme: "court", category: "Sports" },
+  { name: "Greenlit", slug: "greenlit", summary: "A satirical movie producer simulation where every swipe can make or break the box office.", badge: "Movie Sim", theme: "cinema", category: "Games" },
 ];
 
 const appGrid = document.querySelector("#app-grid");
