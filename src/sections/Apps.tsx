@@ -16,6 +16,8 @@ interface AppShowcaseItem {
   details: string[];
 }
 
+const appStoreHref = (id: string) => `https://apps.apple.com/app/id${id}`;
+
 const apps: AppShowcaseItem[] = [
   {
     name: "Calry",
@@ -28,8 +30,7 @@ const apps: AppShowcaseItem[] = [
     landingUrl: "/calry/",
     googlePlayUrl:
       "https://play.google.com/store/apps/details?id=com.vinaybomma.calry",
-    appStoreUrl:
-      "https://apps.apple.com/us/app/calry-eat-describe-done/id6768771101",
+    appStoreUrl: appStoreHref("6768771101"),
     gradient: "from-emerald-400/30 via-teal-500/10 to-slate-950",
     glow: "bg-emerald-400/30",
     ring: "ring-emerald-300/30",
@@ -46,8 +47,7 @@ const apps: AppShowcaseItem[] = [
     landingUrl: "/coulda/",
     googlePlayUrl:
       "https://play.google.com/store/apps/details?id=com.vinaybomma.coulda",
-    appStoreUrl:
-      "https://apps.apple.com/us/app/coulda-shoulda-didnt/id6769034372",
+    appStoreUrl: appStoreHref("6769034372"),
     gradient: "from-orange-400/35 via-rose-500/10 to-slate-950",
     glow: "bg-orange-400/30",
     ring: "ring-orange-300/30",
@@ -64,8 +64,7 @@ const apps: AppShowcaseItem[] = [
     landingUrl: "/toki/",
     googlePlayUrl:
       "https://play.google.com/store/apps/details?id=com.vinaybomma.toki",
-    appStoreUrl:
-      "https://apps.apple.com/in/app/toki-private-journal/id6765892333",
+    appStoreUrl: appStoreHref("6765892333"),
     gradient: "from-amber-300/35 via-stone-400/10 to-slate-950",
     glow: "bg-amber-300/30",
     ring: "ring-amber-200/30",
@@ -82,8 +81,7 @@ const apps: AppShowcaseItem[] = [
     landingUrl: "/twister/",
     googlePlayUrl:
       "https://play.google.com/store/apps/details?id=com.vinaybomma.twister",
-    appStoreUrl:
-      "https://apps.apple.com/in/app/twister-tongue-twister-app/id6763035442",
+    appStoreUrl: appStoreHref("6763035442"),
     gradient: "from-violet-400/35 via-fuchsia-500/10 to-slate-950",
     glow: "bg-violet-400/30",
     ring: "ring-violet-300/30",
@@ -98,6 +96,7 @@ const apps: AppShowcaseItem[] = [
     icon: "/assets/icons/unbeaten.png",
     screenshot: "/assets/screenshots/unbeaten/1.png",
     landingUrl: "/unbeaten/",
+    appStoreUrl: appStoreHref("6785020541"),
     gradient: "from-yellow-300/35 via-lime-400/10 to-slate-950",
     glow: "bg-yellow-300/30",
     ring: "ring-yellow-200/30",
@@ -114,6 +113,7 @@ const apps: AppShowcaseItem[] = [
     landingUrl: "/ace/",
     googlePlayUrl:
       "https://play.google.com/store/apps/details?id=com.vinaybomma.ace",
+    appStoreUrl: appStoreHref("6786992153"),
     gradient: "from-green-300/35 via-emerald-400/10 to-slate-950",
     glow: "bg-green-300/30",
     ring: "ring-green-200/30",
@@ -130,6 +130,7 @@ const apps: AppShowcaseItem[] = [
     landingUrl: "/greenlit/",
     googlePlayUrl:
       "https://play.google.com/store/apps/details?id=com.vinaybomma.greenlit",
+    appStoreUrl: appStoreHref("6787692845"),
     gradient: "from-yellow-500/35 via-stone-500/10 to-slate-950",
     glow: "bg-yellow-400/30",
     ring: "ring-yellow-300/30",
