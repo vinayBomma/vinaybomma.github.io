@@ -96,6 +96,8 @@ const apps: AppShowcaseItem[] = [
     icon: "/assets/icons/unbeaten.png",
     screenshot: "/assets/screenshots/unbeaten/1.png",
     landingUrl: "/unbeaten/",
+    googlePlayUrl:
+      "https://play.google.com/store/apps/details?id=com.vinaybomma.unbeaten",
     appStoreUrl: appStoreHref("6785020541"),
     gradient: "from-yellow-300/35 via-lime-400/10 to-slate-950",
     glow: "bg-yellow-300/30",
