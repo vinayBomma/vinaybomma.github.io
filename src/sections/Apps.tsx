@@ -138,6 +138,20 @@ const apps: AppShowcaseItem[] = [
     ring: "ring-yellow-300/30",
     details: ["Movie simulation", "Casting chaos", "Box office runs"],
   },
+  {
+    name: "Unqualified",
+    slug: "unqualified",
+    category: "Games",
+    summary:
+      "Choose a restaurant, startup, football, or creator career, make difficult calls, and see whether your next run earns a verdict worth celebrating.",
+    icon: "/assets/icons/unqualified.png",
+    screenshot: "/assets/screenshots/unqualified/1.png",
+    landingUrl: "/unqualified/",
+    gradient: "from-teal-400/35 via-emerald-500/10 to-slate-950",
+    glow: "bg-teal-400/30",
+    ring: "ring-teal-300/30",
+    details: ["Four careers", "Tough choices", "Daily challenge"],
+  },
 ];
 
 const Apps: React.FC = () => {
