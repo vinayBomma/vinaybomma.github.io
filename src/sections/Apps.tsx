@@ -147,6 +147,9 @@ const apps: AppShowcaseItem[] = [
     icon: "/assets/icons/unqualified.png",
     screenshot: "/assets/screenshots/unqualified/1.png",
     landingUrl: "/unqualified/",
+    googlePlayUrl:
+      "https://play.google.com/store/apps/details?id=com.vinaybomma.unqualified",
+    appStoreUrl: appStoreHref("6811052529"),
     gradient: "from-teal-400/35 via-emerald-500/10 to-slate-950",
     glow: "bg-teal-400/30",
     ring: "ring-teal-300/30",
