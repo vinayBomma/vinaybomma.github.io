@@ -6,6 +6,7 @@ const apps = [
   { name: "Unbeaten XI", slug: "unbeaten", summary: "A focused sports companion for building your best XI and revisiting match-day plans.", badge: "Team Planner", theme: "gold", category: "Sports" },
   { name: "Ace", slug: "ace", summary: "A tennis companion for building lineups, setting custom rules, and chasing unbeaten runs.", badge: "Tennis Game", theme: "court", category: "Sports" },
   { name: "Greenlit", slug: "greenlit", summary: "A satirical movie producer simulation where every swipe can make or break the box office.", badge: "Movie Sim", theme: "cinema", category: "Games" },
+  { name: "Unqualified", slug: "unqualified", summary: "A career survival simulation where your decisions shape the verdict.", badge: "Career Simulation", theme: "career", category: "Games" },
 ];
 
 const appGrid = document.querySelector("#app-grid");
